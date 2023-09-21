@@ -1,0 +1,104 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=.7in, right=.7in, top=.7in, bottom=.7in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{multicol}
+\usepackage{newtxtext}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontawesome}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+\definecolor{myBlue}{RGB}{0, 32, 96}
+\newcommand{\colorLinkedinSign}{\textcolor{rgb:red,6;green,108;blue,170}{\faLinkedinSquare}}
+
+% Formatting sections
+% \titleformat{\section}{\large\bfseries}{\thesection}{0.5em}{}
+% \titlespacing*{\section}{0pt}{2.5ex plus 1ex minus .2ex}{1.3ex plus .2ex}
+\titleformat{\section}%
+    {\color{myBlue}\vspace{-4pt}\scshape\raggedright\large\bfseries}% format
+    {}% label
+    {0em}% space between label and title
+    {}% before code
+    [\color{myBlue}\titlerule\vspace{-5pt}]% after code
+
+% No page numbers
+\pagenumbering{gobble}
+
+\begin{document}
+
+\begin{center}
+\textbf{\color{myBlue}\huge Your Name} \quad \href{https://www.linkedin.com/in/your-linkedin-profile/}{\Large\colorLinkedinSign}\\
+City, State, Country $\vert$ \href{tel:+1234567890}{(123)-456-7890} $\vert$ \href{mailto:your-email@example.com}{your-email@example.com} $\vert$ \href{http://www.your-website.com}{www.your-website.com}
+\end{center}
+
+
+\section{Education}
+\textbf{University Name} \hfill \textit{Degree}\hfill Start Year - End Year
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{0em}
+    \item Major in \textbf{Subject}, Minor in \textbf{Subject}
+    \item GPA: X.XX/4.0
+    \item Honors/Awards: List any relevant honors or awards here
+\end{itemize}
+
+\section{Work Experience}
+\textbf{\color{myBlue}Company Name} \hfill City, State, Country\\ 
+\textit{Position} \hfill Start Date - End Date\\
+Job Description: Provide a brief description of your responsibilities and achievements in this role.
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{0em}
+    \item Task 1: Description of task 1
+    \item Task 2: Description of task 2
+    \item Task 3: Description of task 3
+\end{itemize}
+\smallskip
+\textit{Position} \hfill Start Date - End Date
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{0em}
+    \item Task 1: Description of task 1
+    \item Task 2: Description of task 2
+    \item Task 3: Description of task 3
+\end{itemize}
+
+\section{Projects}
+\textbf{\color{myBlue}Project Name} \hfill Start Year - End Year
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{0em}
+    \item Description of the project and your role
+    \item Description of the project and your role
+    \item Description of the project and your role
+\end{itemize}
+\smallskip
+\textbf{\color{myBlue}Project Name} \hfill Start Year - End Year
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{0em}
+    \item Description of the project and your role
+    \item Description of the project and your role
+    \item Description of the project and your role
+\end{itemize}
+
+\end{document}
